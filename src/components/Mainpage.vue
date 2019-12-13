@@ -5,21 +5,35 @@
             <p>без смс и с регистрацией</p>
         </div>
         <div class="steps">
-            <div class="first_step">
+            <div class="first_step step">
                 <img src="../assets/img/fill.png" alt="Шаг первый">
                 <h2><span> Шаг 1:</span> настройте форму</h2>
             </div>
             <Choosefields></Choosefields>
+            <div class="second_step step">
+                <img src="../assets/img/forms.png" alt="Шаг второй">
+                <h2><span> Шаг 2:</span> получите токен</h2>
+            </div>
+            <GetToken></GetToken>
+            <div class="third_step step">
+                <img src="../assets/img/code.png" alt="Шаг третий">
+                <h2><span> Шаг 3:</span> вставьте код формы в ваш проект</h2>
+            </div>
+            <CodeSample></CodeSample>
         </div>
     </div>
 </template>
 <script>
 import Choosefields from './Choosefields';
+import GetToken from './GetToken';
+import CodeSample from './CodeSample';
 
 export default {
   name: 'Mainpage',
   components: {
     Choosefields,
+    GetToken,
+    CodeSample,
   },
 };
 </script>
@@ -51,16 +65,16 @@ export default {
 .steps {
     margin-top: 130px;
 }
-.steps .first_step {
+.steps .step {
     height: 100px;
     display: inline-table;
 }
-.steps .first_step img {
+.steps .step img {
     height: 100px;
     margin-left: 300px;
     display: inline-block;
 }
-.steps .first_step h2 {
+.steps .step h2 {
     display: table-cell;
     font-family: Raleway-Regular;
     font-size: 42px;
@@ -70,9 +84,12 @@ export default {
     vertical-align: middle;
     padding-left: 30px;
 }
-.steps .first_step h2 span {
+.steps .step h2 span {
     font-family: Raleway-SemiBold;
     text-transform: uppercase;
     padding-right: 20px;
+}
+.second_step, .third_step {
+    margin-top: 50px;
 }
 </style>

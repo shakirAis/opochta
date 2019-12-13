@@ -11,7 +11,7 @@
                     <span class="checkmark"></span></label>
                     <input type="phone" placeholder="+79000000000">
                     <label class="container"><input type="checkbox">
-                    <span class="checkmark passive"></span></label>
+                    <span class="checkmark"></span></label>
                     <input class="passive" type="email" placeholder="example@mail.ru">
                     <button>Связаться со мной!</button>
                 </form>
@@ -201,9 +201,13 @@
     .template_wrapper h3 {
         padding-bottom: 20px;
     }
-    p.template_text {
+    .template_wrapper p.template_text {
         font-family: Raleway-Regular;
         font-size: 23px;
         padding-left: 60px;
+    }
+    .template_wrapper p.template_text span {
+        font-style: italic;
+        font-weight: 600;
     }
 </style>
